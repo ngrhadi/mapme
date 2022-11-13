@@ -1,25 +1,35 @@
 import { useState, useEffect } from 'react'
 import { Layout, Page, Text, List, Code } from '@vercel/examples-ui'
-import { Button } from '@ngrhadi/ui';
+import { Lay, Button } from '@ngrhadi/ui';
 import { matchingTextColor, randomColor } from '@ngrhadi/utils';
 
 export default function Index() {
-  const [bgColor, setBgColor] = useState('')
-  const [textColor, setTextColor] = useState('')
+  const [construct, setContruct] = useState('turbo repo');
+  const [isShow, setIsShow] = useState(false);
+  const handleShow = () => {
+    setIsShow(!isShow);
+  };
+  const [bgColor, setBgColor] = useState('');
+  const [textColor, setTextColor] = useState('');
   const changeColor = () => {
-    const bg = randomColor()
-    setBgColor(bg)
-    setTextColor(matchingTextColor(bg))
-  }
+    const bg = randomColor();
+    setBgColor(bg);
+    setTextColor(matchingTextColor(bg));
+  };
 
-  useEffect(changeColor, [])
+  useEffect(changeColor, []);
 
   return (
     <Page>
-      <Text variant="h1" className="mb-6">
-        Monorepo
+      <Text variant="h1" className="mb-6 flex flex-col justify-center">
+        <Lay />
+        <button className="btn bg-gray-400" onClick={handleShow}>
+          This is {''}
+          {isShow ? 'Turbo Repo' : 'LoL'}
+        </button>
+        <br />
       </Text>
-      <Text className="mb-4">
+      {/* <Text className="mb-4">
         In this monorepo app we have a single site with two installed
         dependencies that are available in the same repository.
       </Text>
@@ -49,9 +59,9 @@ export default function Index() {
             Change Color
           </Button>
         </>
-      )}
+      )} */}
     </Page>
-  )
+  );
 }
 
 Index.Layout = Layout

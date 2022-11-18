@@ -14,11 +14,14 @@
     "@ngrhadi/ui": "workspace:*",
     "@ngrhadi/utils": "workspace:*",
     "@vercel/examples-ui": "^1.0.4",
+    "firebase": "8.0.2",
+    "js-cookie": "^3.0.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.2",
     "@types/node": "^18.0.0",
     "@types/react": "latest",
     "autoprefixer": "^10.4.12",

@@ -5,7 +5,7 @@ module.exports = {
   // `ui.content` includes a path to the components that are using tailwind in @ngrhadi/ui
   content: ui.content.concat([
     './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/**/*.{js,ts,jsx,tsx}',
     './node_modules/@vercel/examples-ui/**/*.js',
   ]),
 }
